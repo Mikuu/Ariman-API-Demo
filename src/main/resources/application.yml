@@ -1,0 +1,20 @@
+---
+server:
+  port: 8001
+---
+spring:
+  application:
+    name: ariman-api-demo
+  profiles: default
+  datasource:
+    driver-class-name: org.sqlite.JDBC
+    url: jdbc:sqlite:database/demodb.db
+  jpa:
+    database-platform: com.arxman.apidemo.config.SQLiteDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+---
+logging:
+  level:
+    root: INFO
